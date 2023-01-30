@@ -1,4 +1,5 @@
 <script>
+    // "Reusable components"
     import Book from './Book.svelte'
     import Button from './Button.svelte'
     
@@ -43,9 +44,11 @@
     </div>
     <div>
         <label for="description">Description</label>
+        <!-- "Reactive values" + "Binding" -->
         <textarea rows="3" id="description" bind:value={description} />      
     </div>
 
+    <!-- "Props (passing info to children)" -->
     <Book bookTitle={title} bookPrice={price} bookDescription={description} />
     <Button on:click={addBook}>ADD Book</Button>
 </section>
